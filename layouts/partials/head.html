@@ -69,18 +69,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
   {{- end -}}
 
-  <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+  {{ $mainCss := resources.Get "css/main.css" | minify }}
+  <link rel="stylesheet" href="{{ $mainCss.Permalink }}">
 
   {{- if .Site.Params.staticman -}}
-  <link rel="stylesheet" href="{{ "css/staticman.css" | absURL }}" />
+      {{ $staticmanCss := resources.Get "css/staticman.css" | minify }}
+      <link rel="stylesheet" href="{{ $staticmanCss.Permalink }}">
   {{- end -}}
 
   {{- if .Site.Params.useHLJS }}
-  <link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
+      {{ $highlightCss := resources.Get "css/highlight.min.css" | minify }}
+      <link rel="stylesheet" href="{{ $highlightCss.Permalink }}">
   {{- else -}}
-  <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
+      {{ $syntaxCss := resources.Get "css/syntax.css" | minify }}
+      <link rel="stylesheet" href="{{ $syntaxCss.Permalink }}">
   {{- end -}}
-  <link rel="stylesheet" href="{{ "css/codeblock.css" | absURL }}" />
+
+  {{ $codeblockCss := resources.Get "css/codeblock.css" | minify }}
+  <link rel="stylesheet" href="{{ $codeblockCss.Permalink }}">
   
   {{- if .Site.Params.staticman.recaptcha -}}
   <script src='https://www.google.com/recaptcha/api.js'></script>
