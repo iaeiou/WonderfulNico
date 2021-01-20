@@ -48,12 +48,12 @@
   {{- if .Site.Params.selfHosted -}}
 
       <!-- Call css files from assets/css  -->
-      {{ $katexCss := resources.Get "css/katex.min.css" }}
+      {{ $katexCss := resources.Get "css/katex.css" }}
       {{ $fontawesomeCss := resources.Get "css/fontawesome.css" }}
-      {{ $bootstrapCss := resources.Get "css/bootstrap.min.css" }}
+      {{ $bootstrapCss := resources.Get "css/bootstrap.css" }}
       {{ $fontsCss := resources.Get "css/fonts.css" }}
-      {{ $photoswipeCss := resources.Get "css/photoswipe.min.css" }}
-      {{ $photoswipeSkinCss := resources.Get "css/photoswipe.default-skin.min.css" }}
+      {{ $photoswipeCss := resources.Get "css/photoswipe.css" }}
+      {{ $photoswipeSkinCss := resources.Get "css/photoswipe.default-skin.css" }}
       <!-- Concatenate and minify css into bundle.min.css -->
       {{ $BundleCss := slice $katexCss $fontawesomeCss $bootstrapCss $fontsCss $photoswipeCss $photoswipeSkinCss | resources.Concat  "css/bundle.css" }}
       {{ $MinifiedCss := $BundleCss | minify }}
@@ -78,7 +78,7 @@
   {{- end -}}
 
   {{- if .Site.Params.useHLJS }}
-      {{ $highlightCss := resources.Get "css/highlight.min.css" | minify }}
+      {{ $highlightCss := resources.Get "css/highlight.css" | minify }}
       <link rel="stylesheet" href="{{ $highlightCss.Permalink }}">
   {{- else -}}
       {{ $syntaxCss := resources.Get "css/syntax.css" | minify }}
