@@ -1,4 +1,4 @@
-<span class="post-meta">
+<div class="post-meta">
   {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
   {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
   <div class="post-meta-date-posted">
@@ -55,5 +55,5 @@
     &nbsp;&bull;&nbsp;{{ i18n "translationsLabel" }}{{ $linksOutput }}
   </div>
   {{- end }}
-</span>
+</div>
 
