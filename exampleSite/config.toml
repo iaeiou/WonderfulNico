@@ -1,7 +1,7 @@
 baseurl = "https://username.github.io"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "fr"
 #DefaultContentLanguage = "ja"
-title = "Beautiful Hugo"
+title = "WonderfulNico"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
@@ -15,21 +15,21 @@ pygmentsCodefencesGuessSyntax = true
 
 [Params]
 #  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
-  subtitle = "Build a beautiful and simple website in minutes"
+  subtitle = "Le skate sans se prendre la tête !"
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
   commit = false
   rss = true
   comments = true
-  readingTime = true
-  wordCount = true
+  readingTime = false
+  wordCount = false
   useHLJS = true
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
   selfHosted = true
-#  hideAuthor = true
+  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
@@ -75,7 +75,7 @@ pygmentsCodefencesGuessSyntax = true
   slack = "username"
 
 [[menu.main]]
-    name = "Blog"
+    name = "Boutique"
     url = ""
     weight = 1
 
